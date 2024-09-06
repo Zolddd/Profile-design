@@ -6,127 +6,161 @@
     <title>Profile Design</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
     <div class="container">
-      <!-- Account page navigation-->
-      <nav class="nav">
-        <a class="nav-link active" href="#">Profile</a>
-        <a class="nav-link" href="#">Billing</a>
-        <a class="nav-link" href="#">Security</a>
-        <a class="nav-link" href="#">Notifications</a>
-      </nav>
       <div class="row">
-        <div class="col profile-picture">
-          <!-- Profile picture card-->
-          <div class="card profile-card">
-            <div class="card-header">Profile Picture</div>
-            <div class="card-body">
-              <!-- Profile picture image-->
-              <img
-                class="profile-image"
-                src="Profile photo.png"
-                alt="Profile Picture"
-              />
-              <!-- Profile picture help block-->
-              <div class="help-text">JPG or PNG no larger than 5 MB</div>
-              <!-- Profile picture upload button-->
-              <button class="btn upload-btn" type="button">
-                Upload new image
-              </button>
-            </div>
-          </div>
+        <!-- Left Section -->
+        <div class="col-left">
+          <h2>Profile Picture</h2>
+          <div class="profile-picture"></div>
+          <div class="name">Your Name</div>
+          <button class="tab-button" id="dashboardButton">Dashboard</button>
+          <button class="tab-button" id="changePasswordButton">
+            Change Password
+          </button>
         </div>
-        <div class="col account-details">
-          <!-- Account details card-->
-          <div class="card details-card">
-            <div class="card-header">Account Details</div>
-            <div class="card-body">
-              <form>
-                <!-- Form Group (username)-->
-                <div class="form-group">
-                  <label for="inputUsername">Username</label>
-                  <input
-                    class="big_input"
-                    id="inputUsername"
-                    type="text"
-                    placeholder="Enter your username"
-                    value=""
-                  />
-                </div>
-                <!-- Form Row-->
-                <div class="row">
-                  <!-- Form Group (first name)-->
-                  <div class="form-group col">
-                    <label for="inputFirstName">First name</label>
+
+        <!-- Right Section -->
+        <div class="col-right">
+          <!-- Account Details Form -->
+          <div id="accountDetails">
+            <div class="card details-card">
+              <div class="card-header">Account Details</div>
+              <div class="card-body">
+                <form>
+                  <!-- Form Group (username)-->
+                  <div class="form-group">
+                    <label for="inputUsername">Username</label>
                     <input
-                      class="form-control"
-                      id="inputFirstName"
+                      class="big_input"
+                      id="inputUsername"
                       type="text"
-                      placeholder="Enter your first name"
-                      value=""
+                      placeholder="Enter your username"
                     />
                   </div>
-                  <!-- Form Group (last name)-->
-                  <div class="form-group col">
-                    <label for="inputLastName">Last name</label>
-                    <input
-                      class="form-control"
-                      id="inputLastName"
-                      type="text"
-                      placeholder="Enter your last name"
-                      value=""
-                    />
+                  <!-- Form Row -->
+                  <div class="row">
+                    <!-- Form Group (first name)-->
+                    <div class="form-group col">
+                      <label for="inputFirstName">First name</label>
+                      <input
+                        class="form-control"
+                        id="inputFirstName"
+                        type="text"
+                        placeholder="Enter your first name"
+                      />
+                    </div>
+                    <!-- Form Group (last name)-->
+                    <div class="form-group col">
+                      <label for="inputLastName">Last name</label>
+                      <input
+                        class="form-control"
+                        id="inputLastName"
+                        type="text"
+                        placeholder="Enter your last name"
+                      />
+                    </div>
                   </div>
-                </div>
-                <!-- Form Row-->
-                <div class="row">
                   <!-- Form Group (location)-->
-                  <div class="form-group col">
+                  <div class="form-group">
                     <label for="inputLocation">Location</label>
                     <input
                       class="big_input"
                       id="inputLocation"
                       type="text"
                       placeholder="Enter your location"
-                      value=""
                     />
                   </div>
-                </div>
-                <!-- Form Group (email address)-->
-                <div class="form-group">
-                  <label for="inputEmailAddress">Email address</label>
-                  <input
-                    class="big_input"
-                    id="inputEmailAddress"
-                    type="email"
-                    placeholder="Enter your email address"
-                    value=""
-                  />
-                </div>
-                <!-- Form Row-->
-                <div class="row">
+                  <!-- Form Group (email address)-->
+                  <div class="form-group">
+                    <label for="inputEmailAddress">Email address</label>
+                    <input
+                      class="big_input"
+                      id="inputEmailAddress"
+                      type="email"
+                      placeholder="Enter your email address"
+                    />
+                  </div>
                   <!-- Form Group (phone number)-->
-                  <div class="form-group col">
+                  <div class="form-group">
                     <label for="inputPhone">Phone number</label>
                     <input
                       class="big_input"
                       id="inputPhone"
                       type="tel"
                       placeholder="Enter your phone number"
-                      value=""
                     />
                   </div>
-                </div>
-                <!-- Save changes button-->
-                <button class="btn save-btn" type="button">Save changes</button>
-                <button class="btn edit-btn" type="button">Edit</button>
-              </form>
+                  <!-- Save changes and Edit buttons -->
+                  <button class="btn save-btn" type="button">
+                    Save changes
+                  </button>
+                  <button class="btn edit-btn" type="button">Edit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Change Password Form -->
+          <div id="changePasswordForm" style="display: none">
+            <div class="card details-card">
+              <div class="card-header">Change Password</div>
+              <div class="card-body">
+                <form>
+                  <!-- Old Password -->
+                  <div class="form-group">
+                    <label for="inputOldPassword">Old Password</label>
+                    <input
+                      class="big_input"
+                      id="inputOldPassword"
+                      type="password"
+                      placeholder="Enter your old password"
+                    />
+                  </div>
+                  <!-- New Password -->
+                  <div class="form-group">
+                    <label for="inputNewPassword">New Password</label>
+                    <input
+                      class="big_input"
+                      id="inputNewPassword"
+                      type="password"
+                      placeholder="Enter your new password"
+                    />
+                  </div>
+                  <!-- Confirm New Password -->
+                  <div class="form-group">
+                    <label for="inputConfirmPassword"
+                      >Confirm New Password</label
+                    >
+                    <input
+                      class="big_input"
+                      id="inputConfirmPassword"
+                      type="password"
+                      placeholder="Confirm your new password"
+                    />
+                  </div>
+                  <!-- Submit and Cancel buttons -->
+                  <button
+                    class="btn save-btn"
+                    type="button"
+                    id="submitPassword"
+                  >
+                    Submit
+                  </button>
+                  <button
+                    class="btn edit-btn"
+                    type="button"
+                    id="cancelPassword"
+                  >
+                    Cancel
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
-  <script src="script.js"></script>
 </html>

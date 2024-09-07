@@ -15,7 +15,7 @@ body {
 }
 
 .col-left {
-  width: 25%; /* Left section width */
+  width: 20%; /* Left section width */
   background-color: #000;
   color: #fff;
   padding: 20px;
@@ -100,32 +100,44 @@ body {
   font-size: 0.875rem;
 }
 
-.btn {
-  background-color: #0061f2;
-  color: #fff;
+.save-edit-btn {
+  background-color: #3498db;
+  color: white;
   border: none;
   padding: 10px 20px;
+  font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
-  margin-right: 10px;
+  transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-  background-color: #004bb5;
+.save-edit-btn:hover {
+  background-color: #2980b9;
 }
 
-.edit-btn {
-  background-color: #ff9800;
+.cancel-btn {
+  background-color: #d0e1f9;
+  color: #0b4f6c;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.edit-btn:hover {
-  background-color: #e68900;
+.cancel-btn:hover {
+  background-color: #b0cfe9;
+  color: #0b4f6c;
+
 }
 
 /* Existing styles for left and right sections */
 #change-password-section {
   display: none;
 }
+
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
